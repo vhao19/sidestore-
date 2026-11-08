@@ -1,0 +1,14 @@
+#!name = SideStore Local Loopback
+#!desc = 通过 Loon TUN 将 SideStore 的 10.7.0.1 本机回环流量反射回设备，用于替代 LocalDevVPN 的回环通道。需要 Loon Build 1007 或更高版本。
+#!author = ChatGPT
+#!homepage = https://nsloon.app/docs/Plugin/
+#!loon_version = 3.5.3(1007)
+#!date = 2026-11-09
+#!tag = SideStore,LiveContainer,工具
+#!type = normal
+
+[General]
+include-tun = 10.7.0.1/32
+
+[IP Rewrite]
+10.7.0.1 = reflect
